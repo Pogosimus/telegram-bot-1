@@ -4,7 +4,7 @@ import telebot
 import pyown
 
 owm = pyown.OWM('b73122e8768816f7169ad291c7adda8a')
-bot = telebot.TeleBot('974860026:AAG_McEEQCkG71K7wPcT9rBm8yfBb6SB8Gs')
+bot = telebot.TeleBot('97486')
 
 @bot.message_handler(content_types=['text'])
 def start(message):
