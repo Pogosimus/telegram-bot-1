@@ -1,0 +1,14 @@
+# bot t.me\pogoda_eb_tvoy_mat_bot
+
+import telebot
+import pyown
+
+owm = pyown.OWM('b73122e8768816f7169ad291c7adda8a')
+bot = telebot.TeleBot('974860026:AAG_McEEQCkG71K7wPcT9rBm8yfBb6SB8Gs')
+
+@bot.message_handler(content_types=['text'])
+def start(message):
+	if message.text == '/start':
+		bot.send_message(message.from_user.id, 'Привет, ты написал мне')
+
+bot.polling(non_stop= True)
